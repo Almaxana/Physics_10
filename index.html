@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.plot.ly/plotly-2.29.1.min.js" charset="utf-8"></script>
+    <style>
+        input[type="number"] {
+            width: 250px;
+            padding: 10px;
+        }
+    </style>
+    <title>Опыт Юнга</title>
+</head>
+
+<body>
+<form onsubmit="return CountFunction(this)" method ="post">
+    <label>Показатель преломления среды</label>
+    <input  type="number" min="1" max="5" step="0.01" id="n">
+    <br><br>
+
+    <label>Расстояние до экрана (м):</label>
+    <input type="number" min="0" max="100"  step="0.1" id="L">
+    <br><br>
+
+    <label>Расстояние между щелями (мм):</label>
+    <input type="number" min="0" max="10" step="0.001" id="d">
+    <br><br>
+
+    <label>Длина волны (нм):</label>
+    <input type="number" min="0" max="10000" step="0.01" id="lambda">
+    <br><br>
+
+    <input type="submit"  value="Построить график">
+</form>
+
+<div id="message"></div>
+<div id="myDiv"></div>
+<script src="index.js"></script>
+</body>
+
+</html>
